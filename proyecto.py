@@ -22,7 +22,7 @@ significado3 = []
 significado4 = []
 morfemas = []
 # Conexion con la base en Postgres
-conexion1 = psycopg2.connect(DATABASE_URL, sslmode='require')
+conexion1 = psycopg2.connect(sslmode='require')
 cursor = conexion1.cursor()
 
 # Consulta las palabras kichwa con etiquetas positivas
