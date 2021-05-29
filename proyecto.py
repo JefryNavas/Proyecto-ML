@@ -1,6 +1,7 @@
 import re
 import psycopg2
 import nltk
+nltk.download()
 from nltk.corpus import stopwords
 from nltk import stopwords
 import functools
