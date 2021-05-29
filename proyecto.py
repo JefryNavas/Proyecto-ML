@@ -6,22 +6,9 @@ import operator
 import numpy as np
 import math
 import psycopg2
-import urllib.parse as urlparse
-import os
-url = urlparse.urlparse(os.environ['postgres://hpfpbvrscirgei:c8dbfac3371a750650c15a5e27cea0410aa0c8c6ab1708d333b8b7060fe67409@ec2-34-201-248-246.compute-1.amazonaws.com:5432/d7m4ha7d9pvjpl'])
-dbname = url.path[1:]
-user = url.username
-password = url.password
-host = url.hostname
-port = url.port
 
-conexion1 = psycopg2.connect(
-            dbname=dbname,
-            user=user,
-            password=password,
-            host=host,
-            port=port
-            )
+
+conexion1 = psycopg2.connect(host="ec2-34-201-248-246.compute-1.amazonaws.com",database="d7m4ha7d9pvjpl",user="hpfpbvrscirgei",password="c8dbfac3371a750650c15a5e27cea0410aa0c8c6ab1708d333b8b7060fe67409",port="5432")
 es = stopwords.words('spanish')
 
 palabras1 = []
