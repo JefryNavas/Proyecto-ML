@@ -1,6 +1,8 @@
 import re
 import psycopg2
+import nltk
 from nltk.corpus import stopwords
+from nltk import stopwords
 import functools
 import operator
 import numpy as np
